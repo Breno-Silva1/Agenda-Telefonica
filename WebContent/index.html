@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agenda Telefônica</title>
+  <meta charset="utf-8"/>
+  <style type="text/css">
+    body{background-color: #232F47; padding: 15px;}
+    .cell{
+      width: 380px;
+      height: 560px;
+      background-color: #E6E6E6;
+      border-radius: 5%;
+      margin: auto;
+      padding: 30px;
+    }
+    .tela {
+      width: 380px;
+      height: 560px;
+      margin: auto;
+      background-color: #0E83C9;
+      position: absolute;
+      text-align: center;
+    }
+    h1 {
+      padding-top: 15px;
+      font-size: 25px;
+      text-align: center;
+      font-family: "century gothic";
+      text-transform: uppercase;
+      color: #fff;
+    }
+    input{
+      width: 230px;
+    }
+    .btn-search{
+      background-color: #fff;
+      border-style: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #0E83C9;
+    }
+    .btn {
+      background-color: #fff;
+      border-style: none;
+      border-radius: 10%;
+      width: 85px;
+      height: 30px;
+      color: #0E83C9;
+    }
+  </style>
+</head>
+<body>
+  <div class="cell">
+    <div class="tela">
+      <h1>Agenda Telefônica</h1>
+      <form>
+        <input type="text" name="nome_contato" placeholder="Buscar contato...">
+        <button class="btn-search" type="submit">S</button>
+        <br><br><br>
+        <button class="btn">Cadastrar</button>
+        <button class="btn">Editar</button>
+        <button class="btn">Excluir</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
