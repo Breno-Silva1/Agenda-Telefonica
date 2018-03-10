@@ -4,95 +4,19 @@
 	<title>Agenda Telefônica</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style type="text/css">
-    body{background-color: #232F47; padding: 15px;}
-    * {font-family: "century gothic";}
-    .cell{
-      width: 380px;
-      height: 560px;
-      background-color: #E6E6E6;
-      border-radius: 5%;
-      margin: auto;
-      padding: 30px;
-    }
-    .tela {
-      width: 380px;
-      height: 560px;
-      margin: auto;
-      background-color: #0E83C9;
-      position: absolute;
-      text-align: center;
-    }
-    h1 {
-      padding-top: 15px;
-      font-size: 25px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    input{
-      width: 230px;
-    }
-    #form2 input {
-    width: 260px;
-    }
-    .btn-search{
-      background-color: #fff;
-      border-style: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      color: #0E83C9;
-    }
-    .btn {
-      background-color: #fff;
-      border-style: none;
-      border-radius: 10%;
-      width: 85px;
-      height: 30px;
-      color: #0E83C9;
-    }
-    button:hover {
-    	background: #232F47;
-    	color: #fff;
-    	box-shadow: 1px 1px grey;
-    	transition: 0.3s all;
-    	cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
   <div class="cell">
     <div class="tela">
-      <h1>Agenda Telefônica</h1>
-      <form id="form1">
-        <input type="text" name="nome_contato" placeholder="Buscar contato...">
-        <button class="btn-search" type="submit">
-        	<i class="fa fa-search"></i>
-        </button>
-        <br><br><br>
-        <button class="btn"><i class="fa fa-address-book"> Cadastrar</i></button>
-        <button class="btn"><i class="fa fa-edit"> Editar</i></button>
-        <button class="btn"><i class="fa fa-remove"> Excluir</i></button>
-      </form>
+    <br>
+	  <h1>Agenda Telêfonica</h1>
       <br><br>
-      <form id="form2" action="">
-      	<input type="text" name="nome" placeholder="Nome:"><br>
-      	<br>
-      	<input type="email" name="email" placeholder="Email: exemplo@exemplo.com"><br>
-      	<br>
-      	<input type="number" name="numero" placeholder="Número do telefone:"><br>
-      	<br>
-      	<input type="text" name="rua" placeholder="Rua" style="width: 192px;">
-      	<input type="number" name="num" placeholder="Nº:" style="width: 60px;"><br>
-      	<br>
-      	<input type="text" name="bairro" placeholder="Bairro "><br>
-      	<br>
-      	<input type="text" name="cidade" placeholder="Cidade" style="width: 192px;">
-      	<input type="text" name="estado" placeholder="UF:" style="width: 60px;"><br>
-      	<br><br>
-      	<button class="btn" type="reset">Limpar</button>
-      	<button class="btn" type="submit">Cadastrar</button>
+      <form id="form1">
+        <div class="btn"><a href="cadastro.html"><i class="fa fa-address-book"></i> Cadastrar</a></div><br><br>
+        <div class="btn"><a href="#"><i class="fa fa-search"></i> Buscar</a></div><br><br>
+        <div class="btn"><a href="editar.html"><i class="fa fa-edit"></i> Editar</a></div><br><br>
+        <div class="btn"><a href="#"><i class="fa fa-remove"></i> Excluir</a></div><br><br>
       </form>
     </div>
   </div>

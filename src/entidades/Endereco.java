@@ -6,6 +6,19 @@ public class Endereco {
 	private String bairro;
 	private String cidade;
 	private String estado;
+	
+	public Endereco() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Endereco(String rua, int numero, String bairro, String cidade, String estado) {
+		super();
+		this.rua = rua;
+		this.numero = numero;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.estado = estado;
+	}
 
 	public String getRua() {
 		return rua;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agenda Telefônica</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="cell">
+    <div class="tela">
+      <div style="text-align: left;padding: 10px;" title="Voltar"><a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a></div>
+	  <h1><i class="fa fa-address-book"></i> Cadastrar</h1>
+      <br>
+      <form id="form2" method="get" action="Cadastro">
+      	<input type="text" name="nome" placeholder="Nome:" required><br>
+      	<br>
+      	<input type="email" name="email" placeholder="Email: exemplo@exemplo.com" required><br>
+      	<br>
+      	<input type="number" name="numero" placeholder="Número do telefone:" required><br>
+      	<br>
+      	<input type="text" name="rua" placeholder="Rua" style="width: 192px;" required>
+      	<input type="number" name="num" placeholder="Nº:" style="width: 60px;" required><br>
+      	<br>
+      	<input type="text" name="bairro" placeholder="Bairro " required><br>
+      	<br>
+      	<input type="text" name="cidade" placeholder="Cidade" style="width: 192px;" required>
+      	<input type="text" name="estado" placeholder="UF:" style="width: 60px;" required><br>
+      	<br><br>
+      	<button class="btn" type="reset">Limpar</button>
+      	<button class="btn" type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
