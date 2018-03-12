@@ -12,7 +12,7 @@
       <div style="text-align: left;padding: 10px;" title="Voltar"><a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a></div>
 	  <h1><i class="fa fa-address-book"></i> Cadastrar</h1>
       <br>
-      <form id="form2" method="get" action="Cadastro">
+      <form id="form2" method="get" action="Agenda">
       	<input type="text" name="nome" placeholder="Nome:" required><br>
       	<br>
       	<input type="email" name="email" placeholder="Email: exemplo@exemplo.com" required><br>
@@ -27,6 +27,7 @@
       	<input type="text" name="cidade" placeholder="Cidade" style="width: 192px;" required>
       	<input type="text" name="estado" placeholder="UF:" style="width: 60px;" required><br>
       	<br><br>
+      	<input type="hidden" name="operacao" value="cadastrar"/>
       	<button class="btn" type="reset">Limpar</button>
       	<button class="btn" type="submit">Cadastrar</button>
       </form>

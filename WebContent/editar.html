@@ -10,25 +10,30 @@
   <div class="cell">
     <div class="tela">
       <div style="text-align: left;padding: 10px;" title="Voltar"><a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a></div>
+	 <form method="get" action="Agenda">
+		  <input type="number" name="numero_busca" placeholder="Buscar por número..." style="width: 220px;margin-right: 10px;" required>
+		  <input type="hidden" name="operacao" value="editar"/>
+		  <button class="btn-search" type="submit"><i class="fa fa-search"></i></button> 
+	 </form>
 	  <h1><i class="fa fa-edit"></i> Editar</h1>
       <br>
-      <form id="form2" action="">
-      	<input type="text" name="nome" placeholder="Nome:"><br>
+      <form id="form2">
+      	<input type="text" name="nome" placeholder="Nome:" disabled><br>
       	<br>
-      	<input type="email" name="email" placeholder="Email: exemplo@exemplo.com"><br>
+      	<input type="email" name="email" placeholder="Email: exemplo@exemplo.com" disabled><br>
       	<br>
-      	<input type="number" name="numero" placeholder="Número do telefone:"><br>
+      	<input type="number" name="numero" placeholder="Número do telefone:" disabled><br>
       	<br>
-      	<input type="text" name="rua" placeholder="Rua" style="width: 192px;">
-      	<input type="number" name="num" placeholder="Nº:" style="width: 60px;"><br>
+      	<input type="text" name="rua" placeholder="Rua" style="width: 192px;" disabled>
+      	<input type="number" name="num" placeholder="Nº:" style="width: 60px;" disabled><br>
       	<br>
-      	<input type="text" name="bairro" placeholder="Bairro "><br>
+      	<input type="text" name="bairro" placeholder="Bairro " disabled><br>
       	<br>
-      	<input type="text" name="cidade" placeholder="Cidade" style="width: 192px;">
-      	<input type="text" name="estado" placeholder="UF:" style="width: 60px;"><br>
+      	<input type="text" name="cidade" placeholder="Cidade" style="width: 192px;" disabled>
+      	<input type="text" name="estado" placeholder="UF:" style="width: 60px;" disabled><br>
       	<br><br>
-      	<button class="btn" type="reset">Limpar</button>
-      	<button class="btn" type="submit">Editar</button>
+      	<button class="btn" type="reset" disabled>Limpar</button>
+      	<button class="btn" type="submit" disabled>Editar</button>
       </form>
     </div>
   </div>

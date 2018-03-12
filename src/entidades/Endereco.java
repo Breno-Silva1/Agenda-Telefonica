@@ -2,7 +2,7 @@ package entidades;
 
 public class Endereco {
 	private String rua;
-	private int numero;
+	private String numero;
 	private String bairro;
 	private String cidade;
 	private String estado;
@@ -11,7 +11,7 @@ public class Endereco {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Endereco(String rua, int numero, String bairro, String cidade, String estado) {
+	public Endereco(String rua, String numero, String bairro, String cidade, String estado) {
 		super();
 		this.rua = rua;
 		this.numero = numero;
@@ -28,11 +28,11 @@ public class Endereco {
 		this.rua = rua;
 	}
 
-	public int getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 

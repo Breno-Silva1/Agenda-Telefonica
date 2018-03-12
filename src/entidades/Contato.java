@@ -50,5 +50,14 @@ public class Contato {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-
+	
+	@Override
+    public String toString() {
+        return "<hr>Nome: " + this.getNome() + "<br>" +
+               "Email: " + this.getEmail() + "<br>" +
+               "Telefone: " + this.getNumero() + "<br>" +
+               "Endereço: " + this.getEndereco().getRua() + " - " + this.getEndereco().getNumero() + "<br>" +
+               "Bairro: " + this.getEndereco().getBairro() + "<br>" +
+               "Cidade: " + this.getEndereco().getCidade() + "/" + this.getEndereco().getEstado() + "<br><hr>";
+	}
 }
