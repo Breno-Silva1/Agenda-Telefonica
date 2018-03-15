@@ -34,7 +34,7 @@ public class Agenda extends HttpServlet {
         } else if (opc.equals("consultar")) {
             consultar(request, response, request.getParameter("nome"));
         } else if (opc.equals("excluir")){
-            excluir(request, response, request.getParameter("nome"));
+            excluir(request, response, request.getParameter("numero_busca"));
         }
 	}
 
@@ -126,7 +126,7 @@ public class Agenda extends HttpServlet {
     
     public void consultar(HttpServletRequest request, HttpServletResponse response, String nomeDoFormulario) throws IOException {
         PrintWriter out = response.getWriter();
-        boolean flag = false;
+        boolean encontrado = false;
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Buscar</title>");   
@@ -136,18 +136,22 @@ public class Agenda extends HttpServlet {
         out.println("<body>");
         out.print("<div class=\"cell\"><div class=\"tela\">");
         out.println("<div style=\"text-align: left;padding: 10px;\" title=\"Voltar\"><a class=\"back\" href=\"index.html\"><i class=\"fa fa-arrow-left\"></i></a></div>");
-        out.println("<br><br>");
-        out.println("<i style=\"font-size: 80px;color: #fff;\" class=\"fa fa-check-square-o\"></i>");
+        out.println("<form method=\"get\" action=\"Agenda\">"
+        		+ "<input type=\"text\" name=\"numero_busca\" placeholder=\"Buscar por nome...\" style=\"width: 220px;margin-right: 10px;\" required>"
+        		+ "<input type=\"hidden\" name=\"operacao\" value=\"consultar\"/>"
+        		+ "<button class=\"btn-search\" type=\"submit\"><i class=\"fa fa-search\"></i>"
+        		+ "</button> "
+        		+ "</form>");
         out.println("<div class=\"dados\">");
         for (Contato c : agenda) {
             String contato = c.getNome().toLowerCase();
             if ( contato.equals(nomeDoFormulario.toLowerCase()) ) {
-                flag = true;
+                encontrado = true;
                 out.println( c.toString() );
             }
         }
         
-        if (flag == false) {
+        if (encontrado == false) {
             out.println("<h2>Contato não encontrado!</h2>");
         }
         out.print("</div></div></div>");
@@ -155,10 +159,10 @@ public class Agenda extends HttpServlet {
         out.println("</html>");
     }
     
-    public void excluir(HttpServletRequest request, HttpServletResponse response, String nome) throws IOException {
+    public void excluir(HttpServletRequest request, HttpServletResponse response, String numero_busca) throws IOException {
         for (Contato contato : agenda) {
-            String c = contato.getNome();
-            if ( c.equals(nome) ) {
+            String c = contato.getNumero();
+            if ( c.equals(numero_busca) ) {
                 agenda.remove(contato);
                 break;
             }
